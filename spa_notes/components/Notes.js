@@ -2,6 +2,8 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+// import for icons
+import { AiFillDelete , AiFillEdit} from "react-icons/ai";
 
 const baseUrl = 'http://localhost:4000/notes';
 
@@ -222,8 +224,13 @@ export default function Notes() {
                                     {/* send id as a parameter in handleDelete */}
                                     <td>{note.desc}{'    '}</td>
                                     <td>
-                                        <button className="btn btn-outline btn-primary" onClick={() => handleDelete(note.id)}>Delete</button>
-                                        <button className="btn btn-outline btn-secondary" onClick={() => handleEdit(note.id)}>Edit</button>
+                                        <button className="btn btn-outline btn-primary" onClick={() => handleDelete(note.id)}>
+                                        <AiFillDelete/ > Delete
+                                        </button>
+                                        <button className="btn btn-outline btn-secondary" onClick={() => handleEdit(note.id)}>
+                                            <AiFillEdit/> Edit
+                                            
+                                        </button>
                                         {/* <button onClick={(id) => handleDelete(note.id)}>delete</button >
                                         <button onClick={(id) => handleEdit(note.id)}>edit</button > */}
                                     </td>

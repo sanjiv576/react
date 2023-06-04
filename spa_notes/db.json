@@ -16,14 +16,9 @@
       "id": 7
     },
     {
-      "desc": "Great JOb !!",
+      "desc": "Great Job !!",
       "important": false,
       "id": 8
-    },
-    {
-      "desc": "Go home",
-      "important": false,
-      "id": 9
     }
   ]
 }
