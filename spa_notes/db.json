@@ -1,22 +1,7 @@
 {
   "notes": [
     {
-      "id": 1,
-      "desc": "today is chill",
-      "important": true
-    },
-    {
-      "id": 2,
-      "desc": "today is fun",
-      "important": false
-    },
-    {
-      "id": 3,
-      "desc": "today is Thursday",
-      "important": true
-    },
-    {
-      "desc": "Today is Tuesday",
+      "desc": "Today is Tuesday. Good Day !!",
       "important": false,
       "id": 4
     },
@@ -29,6 +14,16 @@
       "desc": "wow is meow",
       "important": true,
       "id": 7
+    },
+    {
+      "desc": "Great JOb !!",
+      "important": false,
+      "id": 8
+    },
+    {
+      "desc": "Go home",
+      "important": false,
+      "id": 9
     }
   ]
 }

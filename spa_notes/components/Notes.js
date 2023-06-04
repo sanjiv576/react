@@ -169,22 +169,75 @@ export default function Notes() {
     return (
         <>
             <h1>Welcome to Notes</h1>
+            <button className="btn btn-primary" onClick={handleImportant}>show {showAll ? 'important' : 'all'}</button>
 
-            <button onClick={handleImportant}> show {showAll ? 'important' : 'all'}</button>
+            {/* <button onClick={handleImportant}> show {showAll ? 'important' : 'all'}</button> */}
+            {/* You can open the modal using ID.showModal() method */}
+            <button className="btn btn-secondary center" onClick={() => window.my_modal_3.showModal()}>Add task</button>
+            <dialog id="my_modal_3" className="modal">
+                <form method="dialog" className="modal-box">
+                    <button htmlFor="my-modal-3" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    <input
+                        placeholder="Enter your note"
+                        className="input input-bordered input-warning w-full max-w-xs"
+                        type="text"
+                        value={desc}
+                        onChange={handleChange}
+                    />
 
-            <ul>
-                {
-                    filteredNotes.map(note =>
-                        <li key={note.id}>{note.desc}{'    '}
-                            {/* send id as a parameter in handleDelete */}
-                            <button onClick={(id) => handleDelete(note.id)}>delete</button >
-                            <button onClick={(id) => handleEdit(note.id)}>edit</button >
-                        </li>
-                    )
-                }
-            </ul >
+                    {
+                        isEdit ?
+                            // <button onClick={handleSave}>Save</button>
+                            <button className="btn btn-primary" onClick={handleSave}>Save</button>
 
-            <form>
+
+                            :
+                            // <button onClick={handleAdd}>Add</button>
+                            <button className="btn btn-primary" onClick={handleAdd}>Add</button>
+
+
+                    }
+                </form>
+            </dialog>
+
+
+            {/* using daisy table */}
+            <div className="overflow-x-auto">
+                <table className="table">
+                    {/* head */}
+                    <thead>
+                        <tr>
+
+                            <th>Description</th>
+
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {/* row 1 */}
+                        {/* <tr className="bg-base-200"> */}
+                        {
+                            filteredNotes.map(note =>
+                                <tr key={note.id} className="bg-base-200">
+                                    {/* send id as a parameter in handleDelete */}
+                                    <td>{note.desc}{'    '}</td>
+                                    <td>
+                                        <button className="btn btn-outline btn-primary" onClick={() => handleDelete(note.id)}>Delete</button>
+                                        <button className="btn btn-outline btn-secondary" onClick={() => handleEdit(note.id)}>Edit</button>
+                                        {/* <button onClick={(id) => handleDelete(note.id)}>delete</button >
+                                        <button onClick={(id) => handleEdit(note.id)}>edit</button > */}
+                                    </td>
+                                </tr>
+                            )
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+            <br></br>
+
+
+            {/* <form>
                 <input
 
                     type="text"
@@ -200,7 +253,8 @@ export default function Notes() {
                         <button onClick={handleAdd}>Add</button>
 
                 }
-            </form>
+            </form> */}
+
         </>
     );
 }

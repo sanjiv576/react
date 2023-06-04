@@ -1,0 +1,14 @@
+
+
+NOte.js 
+ <ul>
+                {
+                    filteredNotes.map(note =>
+                        <li key={note.id}>{note.desc}{'    '}
+                            {/* send id as a parameter in handleDelete */}
+                            <button onClick={(id) => handleDelete(note.id)}>delete</button >
+                            <button onClick={(id) => handleEdit(note.id)}>edit</button >
+                        </li>
+                    )
+                }
+            </ul >
