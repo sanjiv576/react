@@ -90,9 +90,12 @@ export default function Notes() {
             })
         setDesc('')
 
+        window.my_modal_3.close()
+
     };
 
     const handleEdit = (noteId) => {
+        window.my_modal_3.showModal()
         // alert(noteId);
 
         // console.log(notes.find(note => note.id === noteId));
@@ -136,6 +139,9 @@ export default function Notes() {
         // reset the state of button and desc input
         setIsEdit(false);
         setDesc('');
+
+        // close the modal 
+        window.my_modal_3.close();
 
 
     }
