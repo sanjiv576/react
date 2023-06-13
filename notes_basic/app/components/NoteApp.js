@@ -45,7 +45,7 @@ export default function NoteApp() {
   return (
     <div>
       {/* wrap with notesContext i.e context API  to use Provider*/}
-      <notesContext.Provider value={{ notes, handleAdd, desc, setDesc }}>
+      <notesContext.Provider value={{ notes, handleAdd, desc, setDesc, filter, setFilter }}>
 
 <NotesFilter />
 
