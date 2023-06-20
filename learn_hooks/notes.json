@@ -1,0 +1,19 @@
+{
+    "notes": [
+        {
+            "id": 1,
+            "desc": "State management in react",
+            "important": true
+        },
+        {
+            "id": 2,
+            "desc": "Daisy UI provides a useful component library",
+            "important": false
+        },
+        {
+            "id": 3,
+            "desc": "React is fun.",
+            "important": true
+        }
+    ]
+}
