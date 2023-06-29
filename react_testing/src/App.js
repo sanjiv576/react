@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Skill from './components/Skill';
+import Counter from './components/Counter';
+import Notes from './components/Notes';
 
 function App() {
   const skillsList = [
@@ -28,7 +30,11 @@ function App() {
 
     <div>
 
-      <Skill skills={skillsList} />
+      {/* <Skill skills={skillsList} /> */}
+
+      {/* <Counter /> */}
+
+      <Notes/>
       
 
 
