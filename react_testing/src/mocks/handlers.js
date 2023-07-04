@@ -1,8 +1,8 @@
 // src/mocks/handlers.js
 import { rest } from 'msw'
-
+// note: this is mock server
 export const handlers = [
-
+    // here, we can create multiple HTTP request
 
     rest.get('https://jsonplaceholder.typicode.com/todos',
         //   note: ctx = context

@@ -10,6 +10,10 @@ function App() {
     { id: 2, name: 'wiring' },
     { id: 3, name: 'painting' },
   ]
+
+  const handleDelete = () => {
+    alert(`delete this `)
+  }
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -34,7 +38,7 @@ function App() {
 
       {/* <Counter /> */}
 
-      <Notes/>
+      <Notes handleDelete={handleDelete}/>
       
 
 
